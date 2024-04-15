@@ -3,13 +3,13 @@ import React from "react";
 import { Image } from 'react-native';
 
 
-export default function Items() {
+export default function Fruits() {
     return (
         <View className="bg-white">
           <View className="flex-row justify-between items-center px-6 pt-5">
             <View>
              <Text
-             className="text-sm text-2xl font-bold">Bestsellers
+             className="text-sm text-2xl font-bold">Fruits
              </Text>
              </View>
              <TouchableOpacity>
@@ -39,10 +39,10 @@ export default function Items() {
             {
                 <TouchableWithoutFeedback>
                         <View className="mr-6 bg-white rounded-3xl shadow">
-                            <Image className="h-36 w-64 rounded-t-3xl" source={require('../assets/images/tomatoes.jpeg')} />
+                            <Image className="h-36 w-64 rounded-t-3xl" source={require('../assets/images/oranges.webp')} />
                             <View className="px-3 pb-4 space-y-1">
-                                <Text className="text-lg font-bold pt-2">{"Tomatoes"}</Text>
-                                <Text className="text-sm text-gray-500">{"Vegatbables"}</Text>
+                                <Text className="text-lg font-bold pt-2">{"Oranges"}</Text>
+                                <Text className="text-sm text-gray-500">{"Fruits"}</Text>
                                 <Text className="text-lg font-bold">₹ {"30/Kg"}</Text>
                             </View>
                         </View>
@@ -51,10 +51,10 @@ export default function Items() {
             {
                 <TouchableWithoutFeedback>
                 <View className="mr-6 bg-white rounded-3xl shadow">
-                  <Image className="h-36 w-64 rounded-t-3xl" source={require('../assets/images/spinach.avif')} />
+                  <Image className="h-36 w-64 rounded-t-3xl" source={require('../assets/images/banana.webp')} />
                   <View className="px-3 pb-4 space-y-1">
-                    <Text className="text-lg font-bold pt-2">{"Spinach"}</Text>
-                    <Text className="text-sm text-gray-500">{"Vegetables"}</Text>
+                    <Text className="text-lg font-bold pt-2">{"Bananas"}</Text>
+                    <Text className="text-sm text-gray-500">{"Fruits"}</Text>
                     <Text className="text-lg font-bold">₹ {"10/Kg"}</Text>
                   </View>
                 </View>

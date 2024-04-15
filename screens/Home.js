@@ -6,6 +6,9 @@ import { StatusBar } from 'expo-status-bar';
 import Categories from '../components/categories';
 import SnapCook from '../components/snapcook';
 import Items from '../components/items';
+import Footer from '../components/footer';
+import Vegatbables from '../components/vegetables';
+import Fruits from '../components/fruits';
 
 export default function Home() {
     {/*Search Bar*/}
@@ -21,7 +24,7 @@ export default function Home() {
             Electronic City, Bangalore
             </Text>
             <StatusBar barStyle="dark-content" />
-            <View className="flex-row items-center space-x-2 px-4 pt-1">
+            <View className="bg-yellow-300 pb-5 flex-row items-center space-x-2 px-4 pt-1">
                 <View className="bg-white flex-row flex-1 items-center p-3 rounded-full ">
                     <Icon.Search  height="25"  widht="25" stroke="gray"/>
                     <TextInput placeholder="Search Mangoes" className="flex-1 ml-2 text-sm" />
@@ -34,17 +37,18 @@ export default function Home() {
                 </View>
             </View>
             {/*Main Content*/}
-            <ScrollView showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-                paddingBottom: 20
-            }} 
-            > 
+            <ScrollView showsVerticalScrollIndicator={false}> 
             {/*Categories*/}
-            <Categories />
             {/*New Feature*/}
             <SnapCook />
             {/*Featured Items*/}
             <Items />
+            {/* Vegetbales */}
+            <Vegatbables />
+            {/* Fruits */}
+            <Fruits />
+            {/* Footer */}
+            <Footer />
         </ScrollView>
     </SafeAreaView>
     );
