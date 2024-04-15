@@ -3,7 +3,6 @@ import {View, Text, SafeAreaView, TextInput, ScrollView} from 'react-native';
 import React from 'react';
 import * as Icon from "react-native-feather";
 import { StatusBar } from 'expo-status-bar';
-import Categories from '../components/categories';
 import SnapCook from '../components/snapcook';
 import Items from '../components/items';
 import Footer from '../components/footer';

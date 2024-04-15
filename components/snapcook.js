@@ -13,9 +13,9 @@ export default function SnapCook() {
                     Get recipes based on ingredients
                 </Text>
             </View>
-            <View className="bg-white p-5 rounded-full">
+            <View className="bg-yellow-300 p-5 rounded-full">
                 <Text className="font-bold text-sm">
-                    <Icon.Camera className="pt-1" height="25" width="25" stroke="black"/>
+                    Try Now
                 </Text>
             </View>
         </View>
