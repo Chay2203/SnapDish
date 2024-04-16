@@ -7,6 +7,8 @@ import {
   FlatList,
   StyleSheet,
   TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 
 import { showMessage } from "react-native-flash-message";
@@ -24,7 +26,8 @@ const GeminiChat = () => {
     const startChat = async () => {
       const genAI = new GoogleGenerativeAI.GoogleGenerativeAI(API_KEY);
       const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-      const prompt = "Just Say, Welcome to Blinkit! and don't give any description";
+      const prompt =
+        "Just Say, Welcome to Blinkit! and don't give any description";
       const result = await model.generateContent(prompt);
       const response = result.response;
       const text = response.text();
@@ -77,7 +80,10 @@ const GeminiChat = () => {
   );
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}
+    >
       <FlatList
         data={messages}
         renderItem={renderMessage}
@@ -93,14 +99,19 @@ const GeminiChat = () => {
           placeholderTextColor="#fff"
         />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0000", paddingLeft:10, paddingRight:10},
+  container: {
+    flex: 1,
+    backgroundColor: "#0000",
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
   messageContainer: { padding: 10, marginVertical: 5 },
-  messageText: { fontSize: 16, fontWeight:"bold"},
+  messageText: { fontSize: 16, fontWeight: "bold" },
   inputContainer: { flexDirection: "row", alignItems: "center", padding: 10 },
   input: {
     flex: 1,
