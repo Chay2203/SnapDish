@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 import Vegatbables from '../components/vegetables';
 import Fruits from '../components/fruits';
 
-export default function Home() {
+export default function Home({ navigation }) {
     {/*Search Bar*/}
     return (
         <SafeAreaView className="bg-yellow-300">
@@ -31,15 +31,12 @@ export default function Home() {
                     <Icon.Mic height="20" width="20" className="stroke-current text-black" />
                     </View> 
                 </View>
-                <View className="bg-transparent p-3 rounded-full">
-                    <Icon.Sliders height="25" width="25" stroke="black"/>
-                </View>
             </View>
             {/*Main Content*/}
             <ScrollView showsVerticalScrollIndicator={false}> 
             {/*Categories*/}
             {/*New Feature*/}
-            <SnapCook />
+            <SnapCook navigation={navigation}/>
             {/*Featured Items*/}
             <Items />
             {/* Vegetbales */}

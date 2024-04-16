@@ -1,8 +1,8 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import * as Icon from "react-native-feather";
 
-export default function SnapCook() {
+export default function SnapCook({ navigation }) {
     return (
         <View className="bg-white bg-opacity-10 flex-row items-center p-3 pl-6 pr-4 pt-8 rounded-t-3xl">
             <View className="flex-1">
@@ -14,9 +14,11 @@ export default function SnapCook() {
                 </Text>
             </View>
             <View className="bg-yellow-300 p-5 rounded-full">
-                <Text className="font-bold text-sm">
-                    Try Now
-                </Text>
+                <TouchableOpacity 
+                onPress={() => navigation.navigate("Restaurants")}
+                className="font-bold text-sm">
+                    <Icon.ArrowRight height="20" width="20" stroke="black" />
+                </TouchableOpacity>
             </View>
         </View>
     );
