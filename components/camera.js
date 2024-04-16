@@ -11,7 +11,6 @@ export default function Camera() {
         try {
             const result = await DocumentPicker.getDocumentAsync({ type: 'image/*' });
             if (result.type === 'success') {
-                // Handle the selected document, such as uploading it or processing it
                 Alert.alert('Image Selected', `URI: ${result.uri}`);
               }
             } catch (error) {
@@ -52,7 +51,7 @@ export default function Camera() {
       </TouchableOpacity>
       <TouchableOpacity onPress={openDocumentPicker} style={styles.documentButton}>
       <Ionicons name="document" size={32} color="white" />
-      <Text style={styles.buttonText}>Upload a Document</Text>
+      <Text style={styles.buttonText}>Upload a Picture</Text>
     </TouchableOpacity>
     </View>
   );
