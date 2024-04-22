@@ -12,7 +12,7 @@ import Fruits from '../components/fruits';
 export default function Home({ navigation }) {
     {/*Search Bar*/}
     return (
-        <SafeAreaView className="bg-yellow-300">
+        <SafeAreaView className="bg-yellow-300 pt-10">
             <Text className="font-bold ml-6 pb-1">
                 Delivery in
             </Text>
