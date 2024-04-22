@@ -61,11 +61,7 @@ const GeminiChat = () => {
     setMessages([...messages, { text, user: false }]);
     setLoading(false);
     setUserInput("");
-    if (text && !isSpeaking) {
-      Speech.speak(text);
-      setIsSpeaking(true);
-      setShowStopIcon(true);
-    }
+
   };
 
   const renderMessage = ({ item }) => (
@@ -98,10 +94,10 @@ const GeminiChat = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0000", paddingLeft:10, paddingRight:10},
-  messageContainer: { padding: 10, marginVertical: 5 },
+  container: { flex: 2, backgroundColor: "#0000", paddingLeft:10, paddingRight:10},
+  messageContainer: { padding: 10, marginVertical: 5},
   messageText: { fontSize: 16, fontWeight:"bold"},
-  inputContainer: { flexDirection: "row", alignItems: "center", padding: 10 },
+  inputContainer: { flexDirection: "row", alignItems: "center", padding: 10},
   input: {
     flex: 1,
     padding: 10,
@@ -109,26 +105,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 50,
     color: "white",
-  },
-  micIcon: {
-    padding: 10,
-    backgroundColor: "#131314",
-    borderRadius: 25,
-    height: 50,
-    width: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 5,
-  },
-  stopIcon: {
-    padding: 10,
-    backgroundColor: "#131314",
-    borderRadius: 25,
-    height: 50,
-    width: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 3,
   },
 });
 

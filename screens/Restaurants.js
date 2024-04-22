@@ -3,13 +3,14 @@ import React from 'react';
 import Camera from '../components/camera';
 import { Image } from 'react-native';
 import GeminiChat from '../components/chat';
+import Recipies from '../components/recipies';
 
 
 
 export default function Home() {
     return (
         <SafeAreaView className="bg-yellow-300 flex-1">
-            <Text className="font-bold ml-5 text-4xl pb-1 pt-10">
+            <Text className="font-bold ml-5 text-4xl pb-1 ">
             SnapDish
             </Text>
             <Text className="ml-6 pb-2 text-gray-600 pt-3">
@@ -38,6 +39,7 @@ export default function Home() {
             }}>Your AI Assistant.</Text>
             </View> */}
             <GeminiChat />
+            <Recipies />
             <Camera />
         </SafeAreaView>
     );  
@@ -57,3 +59,4 @@ const styles = StyleSheet.create({
       resizeMode: 'contain', 
     },
   });
+  
